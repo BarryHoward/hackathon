@@ -1,6 +1,8 @@
 import angular from 'angular';
 import 'angular-ui-router';
-import { MainController } from "./controllers/";
+import { addController } from "./controllers/add";
+import { detailsController } from "./controllers/details";
+import { homeController } from "./controllers/home";
 
 
 

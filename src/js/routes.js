@@ -1,6 +1,11 @@
-function routerConfig ($arg , $arg) {
+function routerConfig ($stateProvider , $urlRouterProvider) {
 
+
+
+
+
+$urlRouterProvider.otherwise('/');
 };
 
-routerConfig.$inject = ['$arg', '$arg'];
+routerConfig.$inject = ['$stateProvider', '$arg'];
 export { routerConfig };
