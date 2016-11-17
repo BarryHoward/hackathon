@@ -1,9 +1,9 @@
 const SERVER = 'https://hackathon-backend.herokuapp.com/posts/'
 
+function update ($scope, $http, $state) {
 
-function addController ($scope, $http, $state) {
-  $scope.addImage = (image) => {
-    $http.post(SERVER, image).then((resp) => {
+  $scope.updateImage = (image) => {
+    $http.patch(SERVER, image).then((resp) => {
       $state.go('home');
     });
   };
