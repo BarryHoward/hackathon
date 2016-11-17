@@ -9,3 +9,6 @@ import { homeController } from "./controllers/home";
 angular
   .module('app', ['ui.router'])
   .config(routerConfig)
+  .controller('addController', addController)
+  .controller('detailsController', detailsController)
+  .controller('homeController', homeController);
