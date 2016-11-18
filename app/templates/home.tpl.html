@@ -2,7 +2,7 @@
 <div ui-view>
 </div>
 	<ul class="images">
-	  <li ng-repeat="i in images">
+	  <li class= "repeat-img" ng-repeat="i in images">
 	  	 <a href="#/details/{{ i.id }}">
 	      <div class="card">
 	        <header>{{ i.title }}</header>
@@ -10,8 +10,7 @@
 	      </div>
 	      </a>
         <div class= "likes"> <div>
-        <i ng-show="{{ i.likes }}" class="fa fa-heart fa-3x"></i>
-        <i ng-hide="{{ i.likes}}" class="fa fa-heart fa-3x naught"></i>
+        <i ng-show="true" class="fa fa-heart fa-3x"></i>
         {{ i.likes }}
       </div>
       </div>
