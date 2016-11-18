@@ -3,10 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Gilda+Display');
 
 
-nav {  display: flex;
+nav {  
+  display: flex;
   justify-content: center;
 
-    a{margin: 10px;}
+  a{
+    margin: 10px;
+  }
 
 }
 
@@ -40,3 +43,47 @@ div.card {
     }
 
 }
+
+
+
+
+
+.detail-card{
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+}
+
+.detail-header{
+
+}
+
+.detail-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+  .left-side-detail{
+    width: 45%;
+  }
+  .right-side-detail{
+    width: 45%;
+
+    .comments {
+      height: 300px;
+      overflow-y: scroll;
+    }
+    .single-comment {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .comment-content {
+        width: 80%;
+      }
+    }
+  }
+}
+
