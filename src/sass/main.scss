@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Gilda+Display');
 
+.container{
+  margin: 0px;
+}
 
 nav {  
   display: flex;
@@ -46,7 +49,7 @@ div.card {
 
 .main-content{
   width: 100%;
-  height: 2000px;
+
 }
 
 .black-box{
@@ -56,8 +59,8 @@ div.card {
   z-index: 1;
   top: 0px;
   left: 0px;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.8);
 
 }
