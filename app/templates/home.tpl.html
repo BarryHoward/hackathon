@@ -1,10 +1,13 @@
-
-<ul class="images">
-  <li ng-repeat="i in images">
-      <div class="card">
-        <header>{{ i.title }}</header>
-        <img ng-src="{{ i.destination_url }}" />
-        <div class= "description">{{i.description}}</div>
-      </div>
-  </li>
-</ul>
+<div ui-view>
+</div>
+	<ul class="images">
+	  <li ng-repeat="i in images">
+	  	 <a href="#/details/{{ i.id }}">
+	      <div class="card">
+	        <header>{{ i.title }}</header>
+	        <img ng-src="{{ i.destination_url }}" />
+	        <div class= "description">{{i.description}}</div>
+	      </div>
+	      </a>
+	  </li>
+	</ul>
