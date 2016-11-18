@@ -3,23 +3,56 @@
 @import url('https://fonts.googleapis.com/css?family=Gilda+Display');
 
 
+#main-heading {
+  font-family: 'Monoton';
+  font-size: 80px;
+  text-align: center;
+}
+
+#camera-container {
+  text-align: center;
+}
+
 nav {  display: flex;
   justify-content: center;
 
-    a{margin: 10px;}
+    a{margin: 10px;
+      font-size: 20px;
+
+    }
 
 }
 
 .images {
   display:flex;
-  align-items:flex-start;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.likes{
+   position:relative;
+ display:block;
+ color: white;
+
+ }
+
+.likes > div {
+  position:absolute;
+  bottom:5px;
+
+}
+
+
+
 
 li.ng-scope {
   width:250px;
   margin: 5px;
 
 }
+
+
 
 div.card {
   height:250px;

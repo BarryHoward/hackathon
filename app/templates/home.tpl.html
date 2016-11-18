@@ -5,9 +5,15 @@
 	  	 <a href="#/details/{{ i.id }}">
 	      <div class="card">
 	        <header>{{ i.title }}</header>
-	        <img ng-src="{{ i.destination_url }}" />
-
+	        <img ng-src="{{ i.destination_url }}"/>
 	      </div>
 	      </a>
+        <div class= "likes"> <div>
+        <i ng-show="{{ i.likes }}" class="fa fa-heart fa-3x"></i>
+        <i ng-hide="{{ i.likes}}" class="fa fa-heart fa-3x naught"></i>
+        {{ i.likes }}
+      </div>
+      </div>
 	  </li>
+
 	</ul>
