@@ -4,14 +4,12 @@ function detailsController ($scope, $http, $stateParams) {
   $scope.image = {};
 
   function init () {
-    console.log("tried to initialize details");
-    $http.get(SERVER).then((resp) => {
+    $http.get(SERVER + $stateParams.id).then((resp) => {
       $scope.image = resp.data;
     });
   };
-
   init();
 }
 
-detailsController.$inject = ['$scope', '$http'];
+detailsController.$inject = ['$scope', '$http', '$stateParams'];
 export { detailsController };

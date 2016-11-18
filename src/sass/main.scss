@@ -3,10 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Gilda+Display');
 
 
-nav {  display: flex;
+nav {  
+  display: flex;
   justify-content: center;
 
-    a{margin: 10px;}
+  a{
+    margin: 10px;
+  }
 
 }
 
@@ -38,5 +41,23 @@ div.card {
       height:240px;
       width: 250px;
     }
+
+}
+
+.main-content{
+  width: 100%;
+  height: 2000px;
+}
+
+.black-box{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 
 }
