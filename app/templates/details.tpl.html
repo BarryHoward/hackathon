@@ -1,7 +1,12 @@
 
-<div class="black-box">
-	<div class="card">
-	  <h3>{{ image.title }}</h3>
-	  <img ng-src="{{ image.destination_url }}" />
-	</div>
+<div class="is-active modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="card">
+      <h3>{{ image.title }}</h3>
+      <img ng-src="{{ image.destination_url }}" />
+        <div class= "description">{{i.description}}</div>
+    </div>
+  </div>
+  <a href="#/"><button class="modal-close"></button></a>
 </div>
