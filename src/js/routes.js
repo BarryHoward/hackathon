@@ -2,7 +2,6 @@ function routerConfig ($stateProvider , $urlRouterProvider) {
 
   $stateProvider
      .state('home', {
-       // abstract: true,
        url: '/',
        templateUrl: 'templates/home.tpl.html',
        controller: 'homeController'

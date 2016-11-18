@@ -1,6 +1,6 @@
 const SERVER = 'https://hackathon-backend.herokuapp.com/posts/'
 
-function detailsController ($scope, $http, $stateParams) {
+function detailsController ($scope, $http, $stateParams, $state) {
 	$scope.image = {};
 
 	function init () {
@@ -21,6 +21,8 @@ function detailsController ($scope, $http, $stateParams) {
 		$http.post(SERVER + $stateParams.id + "/comments", comment).then((resp) => {
 	    	$scope.comments.push(resp.data);
 		});
+
+		$scope.comment.new = "";
 	}
 
 	$scope.deleteComment = (comment) => {
@@ -28,11 +30,20 @@ function detailsController ($scope, $http, $stateParams) {
 			$scope.comments = $scope.comments.filter((element) => {
 				return (comment.id !== element.id);
 			})
-
-			console.log($scope.comments)
 		});
+	}
+
+	$scope.deletePost = (post) => {
+		$http.delete(SERVER + $stateParams.id).then((resp) => {
+			console.log($scope.images);
+			$scope.images = $scope.images.filter((element) => {
+				return ($stateParams.id !== element.id);
+			})
+
+			$state.go("home");
+		})
 	}
 }
 
-detailsController.$inject = ['$scope', '$http', '$stateParams'];
+detailsController.$inject = ['$scope', '$http', '$stateParams', '$state'];
 export { detailsController };

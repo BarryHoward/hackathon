@@ -9,7 +9,7 @@
     	</div>
     	<div class="detail-body">
 	    	<div class="left-side-detail">
-				<img ng-src="{{ image.destination_url }}" />
+				<div class= "img-container"><img ng-src="{{ image.destination_url }}" /></div>
 		        <div class= "description">{{image.description}}</div>
 		    </div>
 		    <div class="right-side-detail">
@@ -17,15 +17,37 @@
 			  		<li ng-repeat="c in comments">
 			  			<div class="single-comment">
 				  			<p class="comment-content">{{ c.content }}</p>
-				  			<button ng-click="deleteComment(c)" class="button is-danger is-outlined">X</button>
+
+							<button ng-click="deleteComment(c)" class="button is-danger">
+				  				<span class="icon">
+				    			<i class="fa fa-times"></i>
+				  				</span>
+				  				<span></span>
+							</button>				  			
 			  			</div>
 			  		</li>
 			  	</ul>
 			  	<form ng-submit="addComment(comment.new)">
-				  	<textarea name="comment" placeholder="New Comment..." ng-model="comment.new"/></textarea>
+				  	<input type="text" placeholder="New Comment..." ng-model="comment.new"/></input>
 		           	<button class="button is-primary">Post Comment!</button>
 		        </form>
 			</div>
+		</div>
+
+		<div class="detail-footer">
+			<button ng-click="updatePost(image)" class="button is-primary">
+  				<span class="icon">
+    			<i class="fa fa-wrench"></i>
+  				</span>
+  				<span>Update</span>
+			</button>
+
+			<button ng-click="deletePost(image)" class="button is-danger">
+  				<span class="icon">
+    			<i class="fa fa-times"></i>
+  				</span>
+  				<span>Delete</span>
+			</button>
 		</div>
     </div>
   
