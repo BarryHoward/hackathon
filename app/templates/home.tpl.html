@@ -2,9 +2,9 @@
 <ul class="images">
   <li ng-repeat="i in images">
       <div class="card">
-        <h4>{{ i.title }}</h4>
+        <header>{{ i.title }}</header>
         <img ng-src="{{ i.destination_url }}" />
+        <div class= "description">{{i.description}}</div>
       </div>
-    </a>
   </li>
 </ul>

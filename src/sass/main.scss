@@ -1,1 +1,42 @@
-@import 'bulma'; 
+@import 'bulma';
+
+@import url('https://fonts.googleapis.com/css?family=Gilda+Display');
+
+
+nav {  display: flex;
+  justify-content: center;
+
+    a{margin: 10px;}
+
+}
+
+.images {
+  display:flex;
+  align-items:flex-start;
+}
+
+li.ng-scope {
+  width:250px;
+  margin: 5px;
+
+}
+
+div.card {
+  height:250px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+    header{
+      font-weight: bolder;
+      color: #2D88CD;
+      font-family: 'Gilda Display', serif;
+    }
+
+    img {
+      height:240px;
+      width: 250px;
+    }
+
+}
