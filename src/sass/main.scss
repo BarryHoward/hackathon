@@ -1,13 +1,11 @@
 @import 'bulma';
 
-@import url('https://fonts.googleapis.com/css?family=Gilda+Display');
-
 *{
   // border: 1px solid black;
   box-sizing: border-box;
 }
 
-
+/* home page styling */
 #main-heading {
   font-family: 'Monoton';
   font-size: 80px;
@@ -15,13 +13,23 @@
 }
 
 #camera-container {
-  text-align: center;
+  margin:auto;
+border: 2px solid gray;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+
+  .fa-camera-retro {
+    margin: 13px;
+
+  }
 }
 
 nav {  display: flex;
   justify-content: center;
 
-    a{margin: 10px;
+    a{font-family:'Arima Madurai';
+      margin: 10px;
       font-size: 20px;
 
     }
@@ -31,25 +39,26 @@ nav {  display: flex;
 .images {
   display:flex;
   justify-content: space-around;
-  // align-items: center;
   flex-wrap: wrap;
-}
-
-.likes{
-   position:relative;
- display:block;
- color: white;
-
- }
-
-.likes > div {
-  position:absolute;
-  bottom:1px;
 
 }
+.repeat-img{
+  position: relative;
+  .likes{
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top:125px;
+    left:125px;
 
 
-
+    }
+}
+.repeat-img:hover {
+  .likes {
+  opacity:inherit;
+  }
+}
 
 li.ng-scope {
   margin: 5px;
@@ -58,7 +67,6 @@ li.ng-scope {
 
 
 div.card {
-  height:250px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -67,21 +75,55 @@ div.card {
     header{
       font-weight: bolder;
       color: #2D88CD;
-      font-family: 'Gilda Display', serif;
+      font-family: 'Arima Madurai', serif;
+      height: 20px;
     }
 
     img {
       height:240px;
       width: 250px;
+      margin: auto;
     }
 
 }
-
 
 .fa-heart {
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: red;
 }
+/* home page styling */
+
+/* add page styling */
+
+h3{
+  text-align: center;
+  font-family: 'Bungee Shade';
+
+}
+
+.new-image {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height:300px;
+  width: 350px;
+  padding-top: 10px;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  input{
+    width:250px;
+  }
+  textarea{
+    width:250px;
+    height:80px;
+
+  }
+}
+
+/* add page styling */
+
 /* details page styling  */
 
 .detail-card{
@@ -135,8 +177,13 @@ div.card {
     width: 45%;
     display: flex;
     flex-direction: column;
+
+    h4{text-align: center;
+      font-family: 'Bungee Shade';
+      border: 2px solid grey;
+    }
     .comments {
-        height: 300px;
+        height: 250px;
         overflow-y: scroll;
         border: 2px solid grey;
       .single-comment {
@@ -161,11 +208,11 @@ div.card {
     form{
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
 
       input{
-        width: 80%;
-        margin-bottom: 20px;
+        width: 100%;
+        margin-bottom: 5px;
       }
       button{
         width: 50%;
