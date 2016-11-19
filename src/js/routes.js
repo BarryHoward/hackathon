@@ -15,7 +15,12 @@ function routerConfig ($stateProvider , $urlRouterProvider) {
        url: '/add',
        templateUrl: 'templates/add.tpl.html',
        controller: 'addController'
-     });
+     })
+    .state('update', {
+      url: '/update/:id', 
+      templateUrl: 'templates/update.tpl.html', 
+      controller: 'updateController'
+    });
 
 
      $urlRouterProvider.otherwise('/');

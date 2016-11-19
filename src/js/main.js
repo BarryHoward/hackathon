@@ -3,6 +3,7 @@ import { routerConfig } from "./routes";
 import { addController } from "./controllers/add";
 import { detailsController } from "./controllers/details";
 import { homeController } from "./controllers/home";
+import { updateController} from "./controllers/update"
 
 
 
@@ -14,3 +15,4 @@ angular
   .controller('addController', addController)
   .controller('detailsController', detailsController)
   .controller('homeController', homeController)
+  .controller('updateController', updateController)

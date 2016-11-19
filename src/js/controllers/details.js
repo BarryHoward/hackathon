@@ -33,16 +33,18 @@ function detailsController ($scope, $http, $stateParams, $state) {
 		});
 	}
 
-	$scope.deletePost = (post) => {
-		$http.delete(SERVER + $stateParams.id).then((resp) => {
-			console.log($scope.images);
-			$scope.images = $scope.images.filter((element) => {
-				return ($stateParams.id !== element.id);
-			})
+	// $scope.gotoUpdate = (post) => {
+	// 	$scope.update = {};
+	// 	$scope.update.id = post.id;
+	// 	$scope.update.title = post.title;
+	// 	$scope.update.destination_url = post.destination_url;
+	// 	$scope.update.description = post.description;
+	// 	// console.log($scope.update)
+	// 	// console.log($scope)
+	// 	$state.go("update")
+	// }
 
-			$state.go("home");
-		})
-	}
+
 }
 
 detailsController.$inject = ['$scope', '$http', '$stateParams', '$state'];

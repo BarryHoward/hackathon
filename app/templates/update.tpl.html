@@ -1,0 +1,17 @@
+<h3 class="title">Update an Image</h3>
+
+<form class="update-image">
+  <p class="control">
+    <input name="title" type="text" placeholder="Name"
+           ng-model="update.title" />
+  </p>
+  <p class="control">
+    <input name="destination_url" type="text" placeholder="Image Url"
+           ng-model="update.destination_url" />
+  </p>
+  <p class="control">
+    <textarea name="description" placeholder="Image Description"
+           ng-model="update.description"/></textarea>
+  </p>
+  <button ng-click="updateImage(update)" class="button is-primary">Update an Image!</button>
+</form>
