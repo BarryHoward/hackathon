@@ -1,18 +1,18 @@
 <div ui-view>
 </div>
-	<ul class="images">
-	  <li class= "repeat-img" ng-repeat="i in images">
-	  	 <a href="#/details/{{ i.id }}">
-	      <div class="card">
-	        <header>{{ i.title }}</header>
-	        <img ng-src="{{ i.destination_url }}"/>
-	      </div>
-	      </a>
-        <div class= "likes"> <div>
-        <i ng-show="true" class="fa fa-heart fa-3x"></i>
-        {{ i.likes }}
-      </div>
-      </div>
-	  </li>
 
+
+	<ul class="images">
+		<li class= "repeat-img" ng-repeat="i in images">
+	  		<a href="#/details/{{ i.id }}">
+		      <div class="card">
+		        <header>{{ i.title }}</header>
+		        <img ng-src="{{ i.destination_url }}"/>
+		      </div>
+	    	</a>
+	        <div class= "likes"> 
+	        	<i class="fa fa-heart fa-3x"></i>
+	        	{{ i.likes }}
+	      	</div>
+		</li>
 	</ul>

@@ -36,12 +36,15 @@
 		</div>
 
 		<div class="detail-footer">
-			<button ng-click="updatePost(image)" class="button is-primary">
+
+			<a href="#/update/{{image.id}}">
+			<button class="button is-primary">
   				<span class="icon">
     			<i class="fa fa-wrench"></i>
   				</span>
   				<span>Update</span>
 			</button>
+			</a>
 
 			<button ng-click="deletePost(image)" class="button is-danger">
   				<span class="icon">
