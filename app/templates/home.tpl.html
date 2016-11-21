@@ -2,17 +2,20 @@
 </div>
 
 
-	<ul class="images">
-		<li class= "repeat-img" ng-repeat="i in images">
+	<div class="images">
+		<div class= "repeat-img" ng-repeat="i in images">
 	  		<a href="#/details/{{ i.id }}">
 		      <div class="card">
-		        <header>{{ i.title }}</header>
-		        <img ng-src="{{ i.destination_url }}"/>
+		      	<img ng-src="{{ i.destination_url }}"/>
+		        <div class="pic-footer">
+		        	<div class="pic-title">{{ i.title }}</div>
+			       	<div class= "likes"> 
+			        	<i class="fa fa-heart fa-3x"></i>
+			        	<div class="like-count">{{ i.likes }}</div>
+		      		</div>
+		      	</div>
 		      </div>
 	    	</a>
-	        <div class= "likes"> 
-	        	<i class="fa fa-heart fa-3x"></i>
-	        	{{ i.likes }}
-	      	</div>
-		</li>
-	</ul>
+
+		</div>
+	</div>
