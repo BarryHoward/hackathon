@@ -33,16 +33,18 @@ function detailsController ($scope, $http, $stateParams, $state) {
 		});
 	}
 
-	// $scope.gotoUpdate = (post) => {
-	// 	$scope.update = {};
-	// 	$scope.update.id = post.id;
-	// 	$scope.update.title = post.title;
-	// 	$scope.update.destination_url = post.destination_url;
-	// 	$scope.update.description = post.description;
-	// 	// console.log($scope.update)
-	// 	// console.log($scope)
-	// 	$state.go("update")
-	// }
+	$scope.likePost = (post) => {
+		var index = $scope.$parent.images.findIndex(function(element){
+			return element.id === post.id;
+		})
+		console.log(index);
+		var likeCount = post.likes+1;
+		var likeObject = {likes: likeCount}
+		$http.patch(SERVER + $stateParams.id, likeObject).then((resp) => {
+			post.likes = likeCount;
+			$scope.$parent.images[index].likes = likeCount;
+		})
+	}
 
 
 }
