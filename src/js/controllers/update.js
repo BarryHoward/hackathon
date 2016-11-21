@@ -4,13 +4,10 @@ function updateController ($scope, $http, $stateParams, $state) {
   
   function init () {
     $http.get(SERVER + $stateParams.id).then((resp) => {
-    	console.log(resp)
-
-    	$scope.update = {};
-		$scope.update.title = resp.data.title;
-		$scope.update.destination_url = resp.data.destination_url;
-		$scope.update.description = resp.data.description;
-
+      $scope.update = {};
+  		$scope.update.title = resp.data.title;
+  		$scope.update.destination_url = resp.data.destination_url;
+  		$scope.update.description = resp.data.description;
     });
 
   }
