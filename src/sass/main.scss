@@ -72,26 +72,55 @@ nav {  display: flex;
   position: relative;
   .likes{
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     opacity: 0;
+    width: 20%;
     color: white;
-    transition: all 1s ease-in;
+    transition: all .2s ease-in;
 
     .like-count{
         font-weight: bolder;
-        color: #2D88CD;
+        // color: #2D88CD;
+        color: white;
         font-family: 'Arima Madurai', serif;
-        font-size: 20pt;
-
+        font-size: 14pt;
     }
+      .fa-heart {
+        position: absolute;
+        z-index: 1;
+        right: 4px;
+
+         // -webkit-text-stroke-width: 1px;
+         // -webkit-text-stroke-color: red;
+         color: black;
+      }
+
+      .like-count{
+        position: relative;
+        z-index: 200;
+        color:white;
+      }
+
+  
   }
 }
 .repeat-img:hover {
   .likes {
     opacity:inherit;
   }
+
+  .card img{
+    opacity: 1;
+  }
+
+  .pic-title{
+    opacity: 1;
+  }
 }
+
+
 
 
 
@@ -106,11 +135,13 @@ nav {  display: flex;
       border: 2px solid black;
       height:240px;
       width: 100%;
+      opacity: .5;
+      transition: all .2s ease-in;
     }
 
     .pic-footer{
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin-top: 10px;
 
       .pic-title{
@@ -119,16 +150,18 @@ nav {  display: flex;
         height: 70px;
         display: inline-block;
         font-weight: bolder;
-        color: #2D88CD;
+        // color: #2D88CD;
+        color: grey;
         font-family: 'Arima Madurai', serif;
         font-size: 20pt;
         overflow-y: hidden;
+
       }
 
       .fa-heart {
-         // -webkit-text-stroke-width: 1px;
-         // -webkit-text-stroke-color: red;
-         color: red
+         -webkit-text-stroke-width: 1px;
+         -webkit-text-stroke-color: black;
+         color: grey;
       }
 
     }
@@ -171,13 +204,43 @@ h3{
 
 /* details page styling  */
 
+.modal-content{
+  width: 800px
+}
+
+.camera-top{
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  .cylinder{
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+    background: lightgrey;
+    border: 1px solid black;
+  }
+
+  .crank{
+    width: 200px;
+    height: 20px;
+    border-radius: 5%;
+    background: lightgrey;
+    border: 1px solid black;
+  }
+}
+
+$detail-background: #151515;
 .detail-card{
   display: flex;
   flex-direction: column;
   background: white;
   border-radius: 8%;
   overflow: hidden;
+  width: 100%;
   border: none;
+  background: $detail-background;
 
 }
 
@@ -186,6 +249,9 @@ h3{
   padding: 10px;
   font-size: 24pt;
   vertical-align: center;
+  color: black;
+  background: lightgrey;
+  border-bottom: 5px solid black;
 
 }
 
@@ -219,11 +285,8 @@ h3{
       .fa-heart {
         position: absolute;
         z-index: 1;
-        top: 20px - $bottom-border;
-        right: 20px;
-
-         // -webkit-text-stroke-width: 1px;
-         // -webkit-text-stroke-color: red;
+        top: 21px - $bottom-border;
+        right: 30%;
          color: black;
       }
 
@@ -235,29 +298,42 @@ h3{
   }
 }
 
+
+
 .detail-body{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 400px;
+    justify-content: center;
+    align-items: stretch;
     overflow: hidden;
+    background: $detail-background;
 
 
 
-$image-height: 300px;
+$image-height: 350px;
+$comment-height: 50px;
   .left-side-detail{
     width: 65%;
 
     .img-container{
-      background: black;
       height: $image-height;
       display: flex;
       align-items: center;
       overflow-y: hidden;
+      justify-content: center;
+
     }
 
     img{
-      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .description {
+      padding: 7px 20px;
+      color: white;
+      height: $comment-height;
+      overflow: hidden;
     }
   }
   .right-side-detail{
@@ -265,19 +341,30 @@ $image-height: 300px;
     display: flex;
     flex-direction: column;
 
-    // h4{text-align: center;
-    //   font-family: 'Bungee Shade';
-    //   border: 2px solid grey;
-    // }
+    input{
+      background: $detail-background;
+      color: white;
+      border: 1px solid grey;
+      margin: none;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
     .comments {
-        height: $image-height - 26px;
+        height: $image-height + $comment-height - 20px;
+        color:white;
         width: 100%;
         overflow-y: scroll;
-        border: 2px solid grey;
         background-image: url("../../images/film2.png");
         background-size: 102% auto;
         background-attachment: local;
         background-repeat: repeat;
+
+        &::-webkit-scrollbar{
+          background: $detail-background;
+        }
+        &::-webkit-scrollbar-thumb{
+          background: grey;
+        }
       .single-comment {
         display: flex;
         flex-direction: row;
@@ -292,7 +379,13 @@ $image-height: 300px;
           background: transparent;
           border: none;
           height: 30px;
-          color: grey;
+          color: white;
+          border: 1px solid $detail-background;
+
+          &:hover{
+            border: 1px solid lightgrey;
+            background: #303030;
+          }
 
           span{
             margin: 0px;
@@ -307,8 +400,7 @@ $image-height: 300px;
       align-items: flex-start;
 
       input{
-        width: 100%;
-        margin-bottom: 5px;
+        width: 95%;
       }
       button{
         width: 50%;
