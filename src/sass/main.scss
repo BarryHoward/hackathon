@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+body {
+  background: lightgrey;
+}
 /* home page styling */
 #main-heading {
   font-family: 'Monoton';
@@ -14,14 +17,34 @@
 
 #camera-container {
   margin:auto;
-border: 2px solid gray;
-border-radius: 50%;
-width: 100px;
-height: 100px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: white;
+  position: relative;
+
+  .flash {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background: white;
+    box-shadow: 0px 0px 40px 30px white;
+  }
 
   .fa-camera-retro {
+    color: black;
     margin: 13px;
+    }
 
+  .fa-camera-retro:hover{
+    .flash{
+      display: block;
+    }
   }
 }
 
@@ -38,58 +61,77 @@ nav {  display: flex;
 
 .images {
   display:flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
 }
 .repeat-img{
+  padding: 0px;
+  margin: 15px;
   position: relative;
   .likes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     opacity: 0;
     color: white;
-    position: absolute;
-    top:125px;
-    left:125px;
+    transition: all 1s ease-in;
 
+    .like-count{
+        font-weight: bolder;
+        color: #2D88CD;
+        font-family: 'Arima Madurai', serif;
+        font-size: 20pt;
 
     }
+  }
 }
 .repeat-img:hover {
   .likes {
-  opacity:inherit;
+    opacity:inherit;
   }
 }
 
-li.ng-scope {
-  margin: 5px;
-
-}
 
 
-div.card {
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+.card {
   text-align: center;
-
-    header{
-      font-weight: bolder;
-      color: #2D88CD;
-      font-family: 'Arima Madurai', serif;
-      height: 20px;
-    }
+  width: 280px;
+  padding: 20px;
+  margin: 0px;
+  box-shadow: 4px 4px 4px 2px black;
 
     img {
+      border: 1px solid black;
       height:240px;
-      width: 250px;
-      margin: auto;
+      width: 100%;
+    }
+
+    .pic-footer{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .pic-title{
+        text-align: left;
+        width: 70%;
+        height: 70px;
+        display: inline-block;
+        font-weight: bolder;
+        color: #2D88CD;
+        font-family: 'Arima Madurai', serif;
+        font-size: 20pt;
+        overflow-y: hidden;
+      }
+
     }
 
 }
 
 .fa-heart {
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: red;
+   // -webkit-text-stroke-width: 1px;
+   // -webkit-text-stroke-color: red;
+   color: red
 }
 /* home page styling */
 
@@ -101,7 +143,7 @@ h3{
 
 }
 
-.new-image {
+.image-form{
   display:flex;
   flex-direction: column;
   align-items: center;

@@ -13,7 +13,7 @@ function homeController ($scope, $http, $state) {
   init();
 
   
-  	$scope.deletePost = (post) => {
+  $scope.deletePost = (post) => {
 		$http.delete(SERVER + post.id).then((resp) => {
 			$scope.images = $scope.images.filter((element) => {
 				return (post.id !== element.id);

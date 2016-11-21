@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   </head>
+
+
   <body ng-app= "app">
     <div id= "main-heading">InstaShare</div>
-      <div id= "camera-container"><i class="fa fa-camera-retro fa-5x"></i>
-      </div>
+        <div id= "camera-container">
+          <a href="#/add"><i class="fa fa-camera-retro fa-5x">
+            <div class="flash"></div>
+          </i></a>
+        </div>
     <div class="main-container">
-      <nav> <a href="#/">Home</a>
+<!--       <nav> <a href="#/">Home</a>
         <a href="#/add">Add</a>
-      </nav>
+      </nav> -->
       <div class= "main-content" ui-view>
       </div>
     </div>
