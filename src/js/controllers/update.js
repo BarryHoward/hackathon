@@ -1,6 +1,6 @@
 const SERVER = 'https://hackathon-backend.herokuapp.com/posts/'
 
-function updateController ($scope, $http, $stateParams, $state) {
+function updateController ($scope, $http, $stateParams, $state, $location) {
   
   function init () {
     $http.get(SERVER + $stateParams.id).then((resp) => {
@@ -16,11 +16,11 @@ function updateController ($scope, $http, $stateParams, $state) {
 
   $scope.updateImage = (image) => {
     $http.patch(SERVER + $stateParams.id, image).then((resp) => {
-      $state.go('home');
+      $location.path('details/' + $stateParams.id)
     });
   };
 
 };
 
-updateController.$inject = ['$scope', '$http', '$stateParams', '$state'];
+updateController.$inject = ['$scope', '$http', '$stateParams', '$state', '$location'];
 export { updateController };

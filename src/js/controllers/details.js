@@ -1,6 +1,6 @@
 const SERVER = 'https://hackathon-backend.herokuapp.com/posts/'
 
-function detailsController ($scope, $http, $stateParams, $state) {
+function detailsController ($scope, $http, $stateParams, $state, $location) {
 	$scope.image = {};
 
 	function init () {
@@ -46,8 +46,12 @@ function detailsController ($scope, $http, $stateParams, $state) {
 		})
 	}
 
+	$scope.gotoUpdate = (post) => {
+		var location = $location.path('update/' + post.id)
+	}
+
 
 }
 
-detailsController.$inject = ['$scope', '$http', '$stateParams', '$state'];
+detailsController.$inject = ['$scope', '$http', '$stateParams', '$state', '$location'];
 export { detailsController };

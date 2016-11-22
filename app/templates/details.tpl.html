@@ -2,7 +2,10 @@
 <div class="is-active modal">
   <div class="modal-background"></div>
   <div class="modal-content">
-
+  	<div class="camera-top">
+  		<div class="cylinder"></div>
+  		<div class="crank"></div>
+  	</div>
     <div class="detail-card">
     	<div class="detail-header">
     		<h3>{{ image.title }}</h3>
@@ -13,42 +16,45 @@
 		        <div class= "description">{{image.description}}</div>
 		    </div>
 		    <div class="right-side-detail">
-          <h4>Comments</h4>
-		        <ul class="comments">
-			  		<li ng-repeat="c in comments">
+<!--           <h4>Comments</h4> -->
+		        <div class="comments">
+			  		<div ng-repeat="c in comments">
 			  			<div class="single-comment">
 				  			<p class="comment-content">{{ c.content }}</p>
 
-							<button ng-click="deleteComment(c)" class="button is-danger">
+							<button ng-click="deleteComment(c)" class="delete-comment">
 				  				<span class="icon">
 				    			<i class="fa fa-times"></i>
 				  				</span>
 				  				<span></span>
 							</button>
 			  			</div>
-			  		</li>
-			  	</ul>
+			  		</div>
+			  	</div>
 			  	<form ng-submit="addComment(comment.new)">
 				  	<input type="text" placeholder="New Comment..." ng-model="comment.new"/></input>
-		           	<button class="button is-primary">Post Comment!</button>
+		     <!--       	<button class="button is-primary">Post Comment!</button> -->
 		        </form>
 			</div>
 		</div>
 
 		<div class="detail-footer">
-
-			<a href="#/update/{{image.id}}">
-			<button class="button is-primary">
+<!-- 
+			<a href="#/update/{{image.id}}"> -->
+			<button class="outer-button" ng-click="gotoUpdate(image)">
   				<span class="icon">
     			<i class="fa fa-wrench"></i>
   				</span>
   				<span>Update</span>
 			</button>
-			</a>
+<!-- 			</a> -->
 
-			<button ng-click="likePost(image)" class="button">{{ image.likes }}</button>
+			<button class="like-button" ng-click="likePost(image)">
+				<i class="fa fa-heart fa-3x"></i>
+				<div class="like-count">{{ image.likes }}</div>
+			</button>
 
-			<button ng-click="deletePost(image)" class="button is-danger">
+			<button class="outer-button" ng-click="deletePost(image)">
   				<span class="icon">
     			<i class="fa fa-times"></i>
   				</span>

@@ -7,8 +7,6 @@ function homeController ($scope, $http, $state) {
     $http.get(SERVER).then((resp) => {
       $scope.images = resp.data;
     });
-
-    console.log($scope)
   }
   init();
 
