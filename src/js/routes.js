@@ -6,6 +6,10 @@ function routerConfig ($stateProvider , $urlRouterProvider) {
        templateUrl: 'templates/home.tpl.html',
        controller: 'homeController'
      })
+     .state('about', {
+        url: '/about',
+        templateUrl: 'templates/about.tpl.html'
+      })
      .state('home.details', {
        url: 'details/:id',
        templateUrl: 'templates/details.tpl.html',
@@ -17,8 +21,8 @@ function routerConfig ($stateProvider , $urlRouterProvider) {
        controller: 'addController'
      })
     .state('update', {
-      url: '/update/:id', 
-      templateUrl: 'templates/update.tpl.html', 
+      url: '/update/:id',
+      templateUrl: 'templates/update.tpl.html',
       controller: 'updateController'
     });
 

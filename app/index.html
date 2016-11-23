@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Monoton|Arima+Madurai|Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Arima+Madurai|Bungee+Shade|Bungee+Inline" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -12,15 +12,24 @@
 
   <body ng-app= "app">
     <div id= "main-heading">InstaShare</div>
+    <nav id ="nav">
+      <div id= "home-container">
+        <a href="#/"><i class="fa fa-home fa-5x">
+
+        </i></a>
+      </div>
         <div id= "camera-container">
           <a href="#/add"><i class="fa fa-camera-retro fa-5x">
             <div class="flash"></div>
           </i></a>
         </div>
+        <div id= "about-container">
+          <a href="#/about"><span>
+  <i class="fa fa-eye fa-5x"></i>
+          </a>
+        </div>
     <div class="main-container">
-<!--       <nav> <a href="#/">Home</a>
-        <a href="#/add">Add</a>
-      </nav> -->
+      </nav>
       <div class= "main-content" ui-view>
       </div>
     </div>
