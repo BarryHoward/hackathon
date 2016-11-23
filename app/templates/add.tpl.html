@@ -1,17 +1,19 @@
-<h3 class="title">Add an Image</h3>
-
+<div id= "form-wrapper">
+  <h3 class="title">Add an Image</h3>
 <form class="image-form">
   <p class="control">
     <input name="title" type="text" placeholder="Name"
            ng-model="image.title" />
   </p>
   <p class="control">
-    <input name="destination_url" type="text" placeholder="Image Url"
+    <input id= "url" name="destination_url" type="text" placeholder="Image Url"
            ng-model="image.destination_url" />
   </p>
   <p class="control">
     <textarea name="description" placeholder="Image Description"
            ng-model="image.description"/></textarea>
   </p>
-  <button ng-click="addImage(image)" class="button is-primary">Add an Image!</button>
+  <button ng-click="addImage(image)" class="button is-outlined">Add an Image!</button>
 </form>
+
+</div>
