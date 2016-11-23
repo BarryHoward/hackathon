@@ -17,8 +17,7 @@ We made use of skills from previous weeks including
 
  * API creation using Adonis--sqlite/Postgres and deployment on Heroku
  * Continued use of Postman to initially test our routes
- * Communication between our backend and frontend
- *	Continued use of Angular and a larger scale use of UI-Router
+ * Continued use of Angular, specifically larger scale use of UI-Router
 
 
 Team Members:
