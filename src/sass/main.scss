@@ -16,9 +16,51 @@ body {
   text-align: center;
 }
 
+#nav {
+  display: flex;
+  justify-content:space-around;
+}
+
+#home-container {
+  margin:auto;
+  border: 2px solid white;
+  // border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background: white;
+  position: relative;
+
+  .fa-home {
+    color: black;
+    margin: 12.5px;
+    }
+  }
+
+
+  #about-container {
+    margin:auto;
+    width: 0;
+    height: 0;
+    border-bottom: 90px solid white;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    position: relative;
+
+
+    .fa-eye {
+      color: black;
+      margin: 12.5px;
+      position: absolute;
+      top:10px;
+      right: -47px;
+      }
+    }
+
+
+
 #camera-container {
   margin:auto;
-  border: 2px solid gray;
+  border: 2px solid white;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -39,7 +81,7 @@ body {
 
   .fa-camera-retro {
     color: black;
-    margin: 13px;
+    margin: 12.5px;
     }
 
   .fa-camera-retro:hover{
@@ -49,21 +91,17 @@ body {
   }
 }
 
-nav {  display: flex;
-  justify-content: center;
 
-    a{font-family:'Arima Madurai';
-      margin: 10px;
-      font-size: 20px;
-
-    }
-
-}
+// nav {  position: relative;
+//
+// }
 
 .images {
   display:flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin: auto;
+
 
 }
 .repeat-img{
@@ -103,7 +141,7 @@ nav {  display: flex;
         color:white;
       }
 
-  
+
   }
 }
 .repeat-img:hover {
@@ -412,3 +450,35 @@ $comment-height: 50px;
 }
 
 /* details page styling */
+
+/* about page styling */
+
+#about-header{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Bungee Inline';
+}
+
+#team {
+  display: flex;
+  justify-content: space-between;
+    li {
+      font-family: 'Arima Madurai';
+      font-size: 25px;
+    }
+}
+
+#about-content{
+  p {
+    width:650px;
+    margin:auto;
+    padding-top: 15px;
+
+  }
+
+  .sub-content{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}/* about page styling */
