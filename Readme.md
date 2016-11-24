@@ -6,7 +6,7 @@ November 21, 2016
 
 [Github Link (backend)](https://github.com/BarryHoward/hackathon-backend/)
 
-[deployed website on surge!](http://tiy-snehelpatel-hackathon.surge.sh)
+[deployed website on surge!](https://tiy-barryhoward-hackathon.surge.sh)
 
 
 Hackathon Purpose/Goals:
