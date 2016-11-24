@@ -14,22 +14,30 @@
     <div id= "main-heading">InstaShare</div>
     <nav id ="nav">
       <div id= "home-container">
-        <a href="#/"><i class="fa fa-home fa-5x">
-
-        </i></a>
+        <a href="#/">
+          <div class="picture-frame">
+            <!-- <div class="grey-picture"> -->
+              <i class="fa fa-picture-o fa-4x"></i>
+            <!-- </div> -->
+          </div>
+        </a>
       </div>
-        <div id= "camera-container">
-          <a href="#/add"><i class="fa fa-camera-retro fa-5x">
+      <div id= "camera-container">
+        <a href="#/add">
+          <i class="fa fa-camera-retro fa-5x">
             <div class="flash"></div>
-          </i></a>
-        </div>
-        <div id= "about-container">
-          <a href="#/about"><span>
-  <i class="fa fa-eye fa-5x"></i>
-          </a>
-        </div>
+          </i>
+        </a>
+      </div>
+      <div id= "about-container">
+        <a href="#/about"><span>
+          <i class="fa fa-eye fa-5x"></i>
+          <div class="eye-cover"></div>
+        </a>
+      </div>
+    </nav>
     <div class="main-container">
-      </nav>
+      
       <div class= "main-content" ui-view>
       </div>
     </div>

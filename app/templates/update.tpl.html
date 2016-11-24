@@ -1,4 +1,4 @@
-<h3 class="title">Update an Image</h3>
+<!-- <h3 class="title">Update an Image</h3>
 
 <form class="image-form">
   <p class="control">
@@ -14,4 +14,40 @@
            ng-model="update.description"/></textarea>
   </p>
   <button ng-click="updateImage(update)" class="button is-primary">Update an Image!</button>
-</form>
+</form> -->
+
+
+<div id= "form-wrapper">
+
+
+
+    <div class="hal">
+      <div class="title">Update an Image</div>
+      <div class="hal-eye">
+        <div class="center-eye" ng-class="class.submit">
+        </div>
+      </div>
+
+
+      <form class="image-form">
+        
+        <p class="control">
+          <input name="title" type="text" placeholder="Name" ng-keyup="validName(update.title)" ng-model="update.title" />
+        </p>
+        
+        <p class="control">
+          <input id= "url" name="destination_url" type="text" ng-keyup="validUrl(update.destination_url)" placeholder="Image Url" ng-model="update.destination_url" />
+        </p>
+        
+        <p class="control">
+          <textarea name="description" placeholder="Image Description" ng-keyup="validDescription(update.description)" ng-model="update.description"/></textarea>
+        </p>
+        
+        <button ng-click="updateImage(update)" class="add-button button is-outlined">Submit!</button>
+      
+
+      </form>
+    </div>
+
+
+</div>
